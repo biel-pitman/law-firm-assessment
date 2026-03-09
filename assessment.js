@@ -450,8 +450,10 @@ opportunities, a recommended service path, and estimated ROI benchmarks for your
 </div>
 </div>`;
 var _root=_w.firstChild;
+var _mount=document.getElementById('af-cdn-mount');
 var _cur=document.currentScript;
-if(_cur&&_cur.parentNode){_cur.parentNode.insertBefore(_root,_cur.nextSibling);}
+if(_mount){_mount.parentNode.replaceChild(_root,_mount);}
+else if(_cur&&_cur.parentNode){_cur.parentNode.insertBefore(_root,_cur.nextSibling);}
 else{document.body.appendChild(_root);}
 
 // --- Form logic ---
